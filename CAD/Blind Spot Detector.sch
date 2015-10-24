@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -358,17 +358,11 @@ Source: http://www.atmel.com/dyn/resources/prod_documents/2535S.pdf</description
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="125" y="42"/>
-<instance part="IC1" gate="G$1" x="56.508" y="42.746" rot="MR0"/>
+<instance part="IC1" gate="G$1" x="58.54" y="43" rot="MR0"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
-<segment>
-<wire x1="77" y1="40" x2="80.01" y2="37.592" width="0.1524" layer="91"/>
-<wire x1="80.01" y1="37.592" x2="80.01" y2="35.306" width="0.1524" layer="91"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
