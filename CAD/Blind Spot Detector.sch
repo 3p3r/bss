@@ -8028,10 +8028,8 @@ W = angled&lt;p&gt;
 <parts>
 <part name="ULTRA_SEN" library="Ultrasonic_sensor" deviceset="ULTRASONIC_SENSOR" device=""/>
 <part name="AVR" library="atmel" deviceset="TINY13" device="PU" technology="-20"/>
-<part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="CBP1" library="rcl" deviceset="C-EU" device="C0805" value=".1pF"/>
 <part name="CBP2" library="rcl" deviceset="C-EU" device="C0805" value=".1pF"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value=".1uF"/>
@@ -8045,50 +8043,46 @@ W = angled&lt;p&gt;
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="SWITCH" library="transistor-small-signal" deviceset="BSS123" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="5MM"/>
-<part name="INPUT" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="VOLT_IN" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="FROM_SEN" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="TO_SEN" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="ULTRA_SEN" gate="G$1" x="119.38" y="43.18"/>
+<instance part="ULTRA_SEN" gate="G$1" x="152.4" y="43.18"/>
 <instance part="AVR" gate="G$1" x="53.34" y="43.18" rot="MR0"/>
-<instance part="P+1" gate="1" x="121.92" y="78.74"/>
 <instance part="P+2" gate="1" x="76.2" y="71.12"/>
 <instance part="GND1" gate="1" x="76.2" y="22.86"/>
-<instance part="GND2" gate="1" x="121.92" y="20.32"/>
 <instance part="CBP1" gate="G$1" x="15.24" y="45.72"/>
-<instance part="CBP2" gate="G$1" x="139.7" y="48.26"/>
+<instance part="CBP2" gate="G$1" x="167.64" y="48.26"/>
 <instance part="C1" gate="G$1" x="101.6" y="86.36"/>
 <instance part="C2" gate="G$1" x="63.5" y="86.36"/>
 <instance part="GND3" gate="1" x="63.5" y="78.74"/>
 <instance part="GND4" gate="1" x="101.6" y="78.74"/>
 <instance part="GND5" gate="1" x="83.82" y="78.74"/>
 <instance part="P+3" gate="1" x="111.76" y="101.6"/>
-<instance part="R1" gate="G$1" x="93.98" y="25.4" rot="R90"/>
+<instance part="R1" gate="G$1" x="86.36" y="25.4" rot="R90"/>
 <instance part="VREG" gate="A1" x="83.82" y="91.44"/>
-<instance part="GND6" gate="1" x="93.98" y="15.24"/>
+<instance part="GND6" gate="1" x="86.36" y="15.24"/>
 <instance part="SWITCH" gate="G$1" x="43.18" y="91.44" rot="R90"/>
-<instance part="LED1" gate="G$1" x="93.98" y="38.1"/>
-<instance part="INPUT" gate="G$1" x="17.78" y="88.9"/>
+<instance part="LED1" gate="G$1" x="86.36" y="38.1"/>
+<instance part="VOLT_IN" gate="G$1" x="17.78" y="88.9"/>
 <instance part="GND7" gate="1" x="27.94" y="81.28"/>
+<instance part="FROM_SEN" gate="G$1" x="119.38" y="48.26"/>
+<instance part="TO_SEN" gate="G$1" x="114.3" y="48.26" rot="MR0"/>
+<instance part="GND2" gate="1" x="106.68" y="38.1"/>
+<instance part="P+1" gate="1" x="106.68" y="63.5"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="+5V" class="0">
-<segment>
-<pinref part="ULTRA_SEN" gate="G$1" pin="VCC"/>
-<wire x1="121.92" y1="66.04" x2="121.92" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-<pinref part="CBP2" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="71.12" x2="121.92" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="71.12" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="71.12" x2="139.7" y2="50.8" width="0.1524" layer="91"/>
-<junction x="121.92" y="71.12"/>
-</segment>
 <segment>
 <pinref part="AVR" gate="G$1" pin="VCC"/>
 <wire x1="73.66" y1="55.88" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
@@ -8110,18 +8104,13 @@ W = angled&lt;p&gt;
 <junction x="101.6" y="91.44"/>
 <pinref part="VREG" gate="A1" pin="VO"/>
 </segment>
+<segment>
+<pinref part="TO_SEN" gate="G$1" pin="3"/>
+<wire x1="106.68" y1="50.8" x2="106.68" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="ULTRA_SEN" gate="G$1" pin="GND"/>
-<wire x1="121.92" y1="30.48" x2="121.92" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="CBP2" gate="G$1" pin="2"/>
-<wire x1="121.92" y1="27.94" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="43.18" x2="139.7" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="27.94" x2="121.92" y2="27.94" width="0.1524" layer="91"/>
-<junction x="121.92" y="27.94"/>
-</segment>
 <segment>
 <pinref part="AVR" gate="G$1" pin="GND"/>
 <wire x1="73.66" y1="38.1" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
@@ -8149,13 +8138,18 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="93.98" y1="20.32" x2="93.98" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="20.32" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="INPUT" gate="G$1" pin="1"/>
+<pinref part="VOLT_IN" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="86.36" x2="27.94" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="86.36" x2="27.94" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="TO_SEN" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="45.72" x2="106.68" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -8169,18 +8163,11 @@ W = angled&lt;p&gt;
 <junction x="63.5" y="91.44"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="ULTRA_SEN" gate="G$1" pin="AN"/>
-<pinref part="AVR" gate="G$1" pin="PB2/PCINT2/SCK/ADC1/T0"/>
-<wire x1="106.68" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="AVR" gate="G$1" pin="PB4/PCINT4/ADC2"/>
-<wire x1="93.98" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="40.64" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="43.18" x2="73.66" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="40.64" x2="86.36" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
 </segment>
 </net>
@@ -8190,22 +8177,56 @@ W = angled&lt;p&gt;
 <wire x1="45.72" y1="86.36" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="88.9" x2="38.1" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="83.82" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="INPUT" gate="G$1" pin="2"/>
+<pinref part="VOLT_IN" gate="G$1" pin="2"/>
 <wire x1="25.4" y1="88.9" x2="38.1" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="33.02" x2="93.98" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="33.02" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="BATTERY" class="0">
 <segment>
-<pinref part="INPUT" gate="G$1" pin="3"/>
+<pinref part="VOLT_IN" gate="G$1" pin="3"/>
 <pinref part="SWITCH" gate="G$1" pin="D"/>
 <wire x1="25.4" y1="91.44" x2="38.1" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="ULTRA_SEN" gate="G$1" pin="AN"/>
+<pinref part="FROM_SEN" gate="G$1" pin="2"/>
+<wire x1="139.7" y1="48.26" x2="127" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="FROM_SEN" gate="G$1" pin="3"/>
+<wire x1="127" y1="50.8" x2="134.62" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="68.58" x2="134.62" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="ULTRA_SEN" gate="G$1" pin="VCC"/>
+<wire x1="154.94" y1="66.04" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="68.58" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="ULTRA_SEN" gate="G$1" pin="GND"/>
+<wire x1="154.94" y1="30.48" x2="154.94" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="27.94" x2="134.62" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="FROM_SEN" gate="G$1" pin="1"/>
+<wire x1="134.62" y1="45.72" x2="127" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="27.94" x2="134.62" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="TO_SEN" gate="G$1" pin="2"/>
+<pinref part="AVR" gate="G$1" pin="PB2/PCINT2/SCK/ADC1/T0"/>
+<wire x1="106.68" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
