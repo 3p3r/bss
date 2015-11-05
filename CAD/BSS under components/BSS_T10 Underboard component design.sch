@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,12 +39,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -7816,9 +7816,6 @@ W = angled&lt;p&gt;
 <pad name="1" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
 <pad name="2" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
 <pad name="3" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-3.81" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="-0.635" size="1.27" layer="21" ratio="10">1</text>
-<text x="-3.81" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
@@ -7841,7 +7838,7 @@ W = angled&lt;p&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MA03-1" prefix="SV" uservalue="yes">
+<deviceset name="MA03-1" prefix="SV">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA03-1" x="0" y="0"/>
@@ -7921,7 +7918,7 @@ DIN A5, landscape with doc field</description>
 <part name="AVR" library="atmel" deviceset="TINY13" device="PU" technology="-20"/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="CBP1" library="rcl" deviceset="C-EU" device="C0805" value=".1uF"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0805" value=".1uF"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0805" value=".1uF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value=".1uF"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
@@ -7930,7 +7927,7 @@ DIN A5, landscape with doc field</description>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="1k"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="LED1" library="led" deviceset="LED" device="5MM"/>
+<part name="LED" library="led" deviceset="LED" device="5MM"/>
 <part name="VOLT_IN" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="TO_SEN" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
@@ -7962,7 +7959,7 @@ signal (logic signal) and GND</text>
 <instance part="AVR" gate="G$1" x="15.24" y="25.4" rot="MR0"/>
 <instance part="P+2" gate="1" x="38.1" y="53.34"/>
 <instance part="GND1" gate="1" x="38.1" y="5.08"/>
-<instance part="CBP1" gate="G$1" x="-22.86" y="27.94"/>
+<instance part="C3" gate="G$1" x="-22.86" y="27.94"/>
 <instance part="C1" gate="G$1" x="93.98" y="73.66"/>
 <instance part="C2" gate="G$1" x="55.88" y="73.66"/>
 <instance part="GND3" gate="1" x="55.88" y="66.04"/>
@@ -7971,7 +7968,7 @@ signal (logic signal) and GND</text>
 <instance part="P+3" gate="1" x="104.14" y="88.9"/>
 <instance part="R1" gate="G$1" x="48.26" y="7.62" rot="R90"/>
 <instance part="GND6" gate="1" x="48.26" y="-2.54"/>
-<instance part="LED1" gate="G$1" x="48.26" y="20.32"/>
+<instance part="LED" gate="G$1" x="48.26" y="20.32"/>
 <instance part="VOLT_IN" gate="G$1" x="30.48" y="76.2"/>
 <instance part="TO_SEN" gate="G$1" x="106.68" y="25.4" rot="MR0"/>
 <instance part="GND2" gate="1" x="99.06" y="15.24"/>
@@ -7989,7 +7986,7 @@ signal (logic signal) and GND</text>
 <wire x1="35.56" y1="38.1" x2="38.1" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="38.1" y1="38.1" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="CBP1" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="45.72" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="45.72" x2="-22.86" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="45.72" x2="-22.86" y2="30.48" width="0.1524" layer="91"/>
@@ -8017,7 +8014,7 @@ signal (logic signal) and GND</text>
 <wire x1="35.56" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="20.32" x2="38.1" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<pinref part="CBP1" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="38.1" y1="10.16" x2="38.1" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="22.86" x2="-22.86" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="10.16" x2="38.1" y2="10.16" width="0.1524" layer="91"/>
@@ -8066,7 +8063,7 @@ signal (logic signal) and GND</text>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="48.26" y1="15.24" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="LED" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="12VBATTERY" class="0">
@@ -8091,7 +8088,7 @@ signal (logic signal) and GND</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="LED" gate="G$1" pin="A"/>
 <wire x1="48.26" y1="22.86" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="AVR" gate="G$1" pin="PB2/PCINT2/SCK/ADC1/T0"/>
 <wire x1="48.26" y1="30.48" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
@@ -8102,7 +8099,6 @@ signal (logic signal) and GND</text>
 </sheets>
 <errors>
 <approved hash="104,1,35.56,38.1,AVR,VCC,+5V,,,"/>
-<approved hash="113,1,48.5817,19.05,LED1,,,,,"/>
 <approved hash="113,1,35.5177,77.6647,VOLT_IN,,,,,"/>
 <approved hash="113,1,101.642,26.8647,TO_SEN,,,,,"/>
 <approved hash="113,1,63.9458,41.171,FRAME2,,,,,"/>
