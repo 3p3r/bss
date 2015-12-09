@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -8170,19 +8170,21 @@ www.irf.com&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
-<text x="-20.32" y="43.18" size="1.778" layer="97">Bypass Cap</text>
+<text x="-22.86" y="33.02" size="1.778" layer="97">Bypass Cap</text>
 <wire x1="58.42" y1="66.04" x2="144.78" y2="66.04" width="0.1524" layer="97"/>
 <wire x1="144.78" y1="66.04" x2="144.78" y2="101.6" width="0.1524" layer="97"/>
 <wire x1="144.78" y1="101.6" x2="58.42" y2="101.6" width="0.1524" layer="97"/>
 <wire x1="58.42" y1="101.6" x2="58.42" y2="66.04" width="0.1524" layer="97"/>
 <text x="63.5" y="101.6" size="1.778" layer="97">Power Supply</text>
-<text x="109.22" y="22.86" size="1.778" layer="97">Connects to ultrasonic sensors 
-power, ground and analog output 
-pins</text>
+<text x="109.22" y="20.32" size="1.778" layer="97">Connects to ultrasonic sensors 
+power, GND and analog output 
+pins
+
+Ananolg output data is received
+as (Vcc/512)/inch</text>
 <text x="63.246" y="96.012" size="1.778" layer="97">Connects to car battery (12V), turn 
-signal (logic signal) and GND</text>
+signal (TSigl) and GND</text>
 <text x="-20.32" y="48.26" size="1.778" layer="97">ATTINY Microcontroller</text>
-<text x="78.486" y="22.86" size="1.778" layer="97">Test pin</text>
 <text x="128.016" y="84.582" size="1.778" layer="97">Test pin</text>
 <text x="92.456" y="81.28" size="1.778" layer="97">Test pin</text>
 <text x="-3.048" y="80.518" size="1.778" layer="95">MISO</text>
@@ -8200,6 +8202,22 @@ signal (logic signal) and GND</text>
 <wire x1="146.05" y1="43.18" x2="146.05" y2="8.636" width="0.1524" layer="97"/>
 <wire x1="146.05" y1="8.636" x2="88.9" y2="8.636" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="8.636" x2="88.9" y2="43.18" width="0.1524" layer="97"/>
+<wire x1="50.8" y1="63.5" x2="86.36" y2="63.5" width="0.1524" layer="97"/>
+<wire x1="86.36" y1="63.5" x2="86.36" y2="27.94" width="0.1524" layer="97"/>
+<wire x1="86.36" y1="27.94" x2="50.8" y2="27.94" width="0.1524" layer="97"/>
+<wire x1="50.8" y1="27.94" x2="50.8" y2="63.5" width="0.1524" layer="97"/>
+<text x="53.34" y="5.08" size="1.778" layer="97">Uses LED to alert user when 
+object is detected within 7 feet
+of sensor while turn signal is
+on (logic high)</text>
+<text x="88.9" y="55.88" size="1.778" layer="97">NMOS switch that converts
+12V logic high signal (TSig)
+to 5V logic high signal</text>
+<text x="50.8" y="63.5" size="1.778" layer="97">NMOS Switch</text>
+<text x="91.44" y="43.18" size="1.778" layer="97">Maxbotix Ultrasonic Sensor</text>
+<text x="58.42" y="22.86" size="1.778" layer="97">Analog Data Out</text>
+<text x="76.2" y="78.74" size="1.778" layer="97">TSig</text>
+<text x="58.42" y="30.48" size="1.778" layer="97" rot="R90">5V Logic Signal</text>
 </plain>
 <instances>
 <instance part="AVR" gate="G$1" x="15.24" y="25.4" rot="MR0"/>
